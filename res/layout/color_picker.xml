@@ -14,9 +14,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
+
 <FrameLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res/com.slushpupie.widget"
+	xmlns:app="@string/package_ns"
 	android:layout_width="@dimen/dimTotalW"
 	android:layout_height="@dimen/dimTotalH"
 	android:id="@+id/color_picker_view">
