@@ -17,7 +17,9 @@ import android.widget.TextView;
 
 public class SeekBarPreference extends DialogPreference implements SeekBar.OnSeekBarChangeListener {
   private static final String androidns = "http://schemas.android.com/apk/res/android";
-  private static final String appns = "http://schemas.android.com/apk/res/com.slushpupie.livewallpaper";
+  //When an app imports a library, the namespace becomes that of the app. Since we cant know it ahead of
+  //time, we are going to rely on the string resources to provide the name. Ugly hack. 
+  //private static final String appns = "http://schemas.android.com/apk/res/com.slushpupie.livewallpaper";
   
   private SeekBar mSeekBar;
   private TextView mSplashText, mValueText;
@@ -28,6 +30,7 @@ public class SeekBarPreference extends DialogPreference implements SeekBar.OnSee
 
   public SeekBarPreference(Context context, AttributeSet attrs) {
     super(context, attrs);
+    String appns = context.getString(R.string.package_ns);
     mContext = context;
 
     int res = attrs.getAttributeResourceValue(androidns, "dialogMessage", -1);

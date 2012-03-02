@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--  this *MUST* be defined by the app consuming this library with the namespace to the app, not the library -->
+    <string name="package_ns">http://schemas.android.com/apk/res/com.slushpupie.livewallpaper</string>
     
     <string name="settings_bg_color_confirm">Confirm</string>
     <string name="settings_default_color_confirm">Default Color</string>

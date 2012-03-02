@@ -1,1 +1,13 @@
 Some simple widgets for android.
+
+To use this, you must include it as a library in your project, and you *MUST*
+define a string resource (in res/values/strings.xml) for package_ns that 
+matches the namespace of your app.  
+
+For example, if your app uses com.example.myapp as the package name, then
+you add the following to your strings.xml:
+
+<string name="package_ns">http://schemas.android.com/apk/res/com.example.myapp</string>
+
+Failure to do so will not result in compile time errors, but will result in
+run time errors while trying to use the widgets.  
