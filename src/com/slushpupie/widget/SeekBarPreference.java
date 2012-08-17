@@ -49,9 +49,8 @@ public class SeekBarPreference extends DialogPreference implements SeekBar.OnSee
     
     mDefault = attrs.getAttributeIntValue(androidns, "defaultValue", 0);
     mMax = attrs.getAttributeIntValue(appns, "max", 100);
-    mMin = attrs.getAttributeIntValue(appns, "minLevel", 0);
+    mMin = attrs.getAttributeIntValue(appns, "min", 0);
 
-    Log.d("LiveWallpaper", "text: " + mSuffix);
   }
 
   @Override
