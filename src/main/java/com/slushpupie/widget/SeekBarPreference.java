@@ -20,8 +20,8 @@ public class SeekBarPreference extends DialogPreference implements SeekBar.OnSee
   //When an app imports a library, the namespace becomes that of the app. Since we cant know it ahead of
   //time, we are going to rely on the string resources to provide the name. Ugly hack. 
   //private static final String appns = "http://schemas.android.com/apk/res/com.slushpupie.widget";
-  //As of ADT-17 you can use res-auto
-  private static final String appns = "http://schemas.android.com/apk/res-auto";
+  //As of ADT-17 you can use http://schemas.android.com/apk/res-auto in the XML, but in-code we still
+  //need the full reference to the package name of whatever package we landed inside 
   
   private SeekBar mSeekBar;
   private TextView mSplashText, mValueText;
@@ -32,7 +32,7 @@ public class SeekBarPreference extends DialogPreference implements SeekBar.OnSee
 
   public SeekBarPreference(Context context, AttributeSet attrs) {
     super(context, attrs);
-    //String appns = context.getString(R.string.package_ns);
+    String appns = context.getString(R.string.package_ns);
     mContext = context;
 
     int res = attrs.getAttributeResourceValue(androidns, "dialogMessage", -1);
